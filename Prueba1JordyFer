@@ -1,0 +1,11 @@
+print("hola")
+
+texto = "hola"
+num1 = 0
+
+texto = int(4)
+num1 = "hola"
+
+if (texto >= 3): {
+    print("variable mayor que 3")
+}
