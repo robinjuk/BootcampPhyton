@@ -29,7 +29,7 @@ def operaciones(variable1,variable2):
         #Division de dos valores (+)
         resultado = num1 / num2
 
-        print(resu)
+        print(resultado)
 
     else:
         print("ERROR")
