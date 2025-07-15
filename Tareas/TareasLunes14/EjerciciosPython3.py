@@ -1,9 +1,9 @@
 import numbers
 
-def multiplo(variable1):
-
-    numero = variable1
-
+def multiplo():
+    
+    numero = int(input("Introdzca el número para comprobar si es múltiplo de 2: "))
+    
     if isinstance (numero, numbers.Number):
         resto = numero % 2
 
@@ -16,8 +16,7 @@ def multiplo(variable1):
     else:
         print("No has introducido un número válido")
 
-multiplo(344)
-
+multiplo()
 #entrada = input("Introduce un valor: ")
 
 #try:

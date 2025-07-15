@@ -9,6 +9,7 @@
 
 import numbers
 
+# coste de la función: o(2n+3)
 def operaciones(variable1,variable2):
     num1 = variable1
     num2 = variable2
