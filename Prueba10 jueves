@@ -1,0 +1,62 @@
+#Clases
+
+#Representación en UML
+#Nombre de la clase
+#Atributos de la clase --> características de la clase
+#Métodos de la clase --> "cosas" que el objeto puede realizar
+
+class persona:
+    nombre = ""
+    apell_1 = ""
+    apell_2 = ""
+    DNI = ""
+    edad = ""
+    altura = ""
+
+    #Metodos
+    def fechaNacimiento():
+        fecha = fechaNow()-edad
+        print("Tu fecha de nacimiento es", fecha)
+
+    def altura():
+        print("La altura es...", altura)
+
+    def matricular():
+        #Algoritmo de 38 líneas
+        print("Matricula realizada correctamente")
+
+
+class estudiante(persona):
+    nivel_estudios = ""
+    cicloformativomatriculado = ""
+
+    def realizarexamen():
+        #algoritmo de 100 lineas
+        print("Examen realizado correctamente")
+
+
+class estudianteCM(estudiante):
+    asignaturassuspensas = 0
+
+class estudianteCS(estudiante):
+    derechoatitulo = false
+
+class profesor(persona):
+    numeroestudiantes = 0
+    numeromodulosformativos = 0
+
+    def corregirexamenes():
+        #Algoritmo 300 lineas
+    
+    def ponernotas():
+        #Algoritmo 32 lineas
+        print("Todo correcto")
+        
+    def impartirdocencia():
+        print("Todo correcto")
+    
+
+class Limpiadores(persona):
+    numeroclasesalimpiar = 0
+    cantidadproductos = 0
+    

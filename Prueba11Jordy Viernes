@@ -1,0 +1,25 @@
+#Archivos de texto 
+#Primero que tenemos que haces, es ABRIR el fichero
+#Segundo --> Recorrer el documento
+#Mientras se recorre, hacer lo que corresponda (leer, ver el final de la línea, espacios...)
+
+#Leer un fichero completo
+fichero = open("Texto11.txt","r")
+
+for linea in fichero:
+    print(linea)
+
+fichero.close()
+
+#Leer un fichero, empleado la función readline
+fichero = open("Texto11.txt","rt")
+
+#Coger una linea para leerla
+linea = fichero.readline()
+
+while linea != '' :
+        for l in linea:
+            print(l,end='')
+        linea = fichero.readline()
+
+fichero.close()

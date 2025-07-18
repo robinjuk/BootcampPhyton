@@ -1,0 +1,47 @@
+#Archivos de texto 
+#Primero que tenemos que haces, es ABRIR el fichero
+#Segundo --> Recorrer el documento
+#Mientras se recorre, hacer lo que corresponda (leer, ver el final de la línea, espacios...)
+
+#Leer un fichero, empleado la función readline
+fichero = open("Texto11.txt","rt")
+
+#Coger una linea para leerla
+#linea = fichero.readline()
+
+#while linea != '' :
+#        for l in linea:
+#            print(l,end='')
+#        linea = fichero.readline()
+
+#fichero.close()
+
+#Escribir en el mismo fichero
+fichero = open("C:/Users/jordy/Desktop/1DAM/BOOTCAMP/1. Python e IA/Python e IA/BootcampPhyton/Texto11.txt","w")
+
+#Escribir en fichero
+#fichero.write("Es esta lo estamos pasando bien\n")
+#fichero.write("Pero estamos teniedndo problemas con el programa de Visual studio\n")
+#fichero.write("Yo me llamo jordy\n")
+#fichero.write("Curso académico 2025-2026\n")
+#
+#fichero.close()
+
+#Escribir de otra manera en un fichero
+
+try:
+
+    fichero = open("Texto11.txt","w")
+
+    for i in range (10):
+        numero = str(i + 1)
+
+        for num in numero:
+            fichero.write(num)
+
+        print(numero,end="-")
+
+    fichero.close()
+
+except Exception as e:
+    print("No se puede abrir el archivo:")

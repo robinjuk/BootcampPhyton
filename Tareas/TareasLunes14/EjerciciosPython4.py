@@ -1,19 +1,18 @@
-def comprobador(variable1):
-    color = variable1
-    color = color.lower()
+def comprobador():
+    colorescribir = input("Introduzca el color de su tarjeta: ")
+    colorescribir = colorescribir.lower()
 
-    if color == "verde":
+    if colorescribir == "verde":
         print("Usted puede pasar sin problema")
 
-    elif color == "amarillo":
+    elif colorescribir == "amarillo":
         print("Usted puede pasar con dificultades")
     
-    elif color == "rojo":
+    elif colorescribir == "rojo":
         print("Usted no puede pasar bajo ningún concepto")
 
     else:
         print("Ha introducido un color no válido")
 
-colorescribir = input("Introduzca el color de su tarjeta: ")
 
-comprobador(colorescribir)
+comprobador()

@@ -1,0 +1,77 @@
+#Recorrer listas
+notas = [4,6,4,8,6,8,6,7,5,7,6,7,6,8,6,8,5,10,7,4,8,9,6,8,5,8,5,7,4,7]
+elementobuscar = 5
+#El numero que yo quiero buscar es el que tiene un 10
+
+#
+def buscar_1(elementobuscar, notas):
+    #Precondición: se supone que la lista es correcta (en este caso la lista es de numero) y el elemento a buscar es un numero.
+    #Postcondición: Nos va a devolver un true, en el case de que el elemento se encuentre. Y false, en caso contrario.
+
+    encontrado = False
+
+    for i in range(0, len(notas)):
+        if (notas[i] == elementobuscar):
+            encontrado = True
+
+    print("El elemento ha sido", encontrado)
+    return encontrado
+
+
+#Problemas.
+# 1. Aunque encuentre el elemento el programa se sigue ejecutando.
+# 2. Se ha puesto un print para saber si realmente imprime true o false (true si lo encuentra y false en caso contrario).
+# 3. Lo ha encontrado en la primera posicion y ha seguidfo en el bucle hasta llegar a la ultima posicion
+
+#Soluciones
+# 1. Cambiar el bucle. el for va fuera y en su lugar, se usa while; pero nos encontramos un problema. Si el elemento no esta en la lista
+#    sale un error 
+
+def buscar_2(elementobuscar, notas):
+    
+    encontrado = False
+
+    i = 0
+
+    while (encontrado == False) and (i < len(notas)):
+        if (notas[i] == elementobuscar):
+            encontrado = True
+
+        i = i + 1
+    
+    if encontrado == False:
+        print("El elemento no se encuentra en la lista")
+    else:
+        print("El elemento ha sido encontrado", encontrado)
+        print("La posición es", i)
+    return encontrado
+
+
+#Ejercicio 3  con contador---------------------------------------------------------------------------------------------------------------------------------
+def buscar_3(elementobuscar, notas):
+    
+    encontrado = False
+    contador = 0
+    i = 0
+
+    while (i < len(notas)):
+        if (notas[i] == elementobuscar):
+            encontrado = True
+            contador = contador + 1
+
+        i = i + 1
+    
+    if encontrado == False:
+        print("El elemento no se ha encontrado")
+    else:    
+        print("El elemento ha sido encontrado", encontrado)
+        print("El número de veces encontrado", contador)
+    return encontrado
+
+#Ejercicio 4 copia con IA ----------------------------------------------------------------------------------------------------------
+#Función python: Es mas pythonico y eficiente. en este caso, solo devuelve true en caso de encontrarlo y false en caso de que no. No devuelve elnúmero
+#de repeticiones, posiciones, etc...
+def buscar_con_ia (elementobuscar, notas):
+    return elementobuscar in notas
+
+buscar_con_ia(elementobuscar, notas)
